@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Progress_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IXm-BU-eNK">
+                                <rect key="frame" x="46.666666666666657" y="421" width="300" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7O2-u6-bOt"/>
+                                    <constraint firstAttribute="height" constant="10" id="f3q-sY-0z0"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-kg-k2h">
+                                <rect key="frame" x="157.66666666666666" y="463" width="78" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="tappedSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AzY-VT-TQP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3c-fw-vaQ">
+                                <rect key="frame" x="96.666666666666686" y="355" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LkR-on-3Ib"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-bA-cos">
+                                <rect key="frame" x="96.666666666666686" y="289" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AdH-cv-hUb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCC-7B-eF6">
+                                <rect key="frame" x="196.66666666666666" y="257" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IXm-BU-eNK" firstAttribute="top" secondItem="q3c-fw-vaQ" secondAttribute="bottom" constant="32" id="M6e-Se-Ot5"/>
+                            <constraint firstItem="q3c-fw-vaQ" firstAttribute="top" secondItem="f3N-bA-cos" secondAttribute="bottom" constant="32" id="MyQ-wm-DKS"/>
+                            <constraint firstItem="bCC-7B-eF6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQZ-Sp-yoo"/>
+                            <constraint firstItem="q3c-fw-vaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XC8-I4-5cb"/>
+                            <constraint firstItem="tMv-kg-k2h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSj-d5-Nlt"/>
+                            <constraint firstItem="IXm-BU-eNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHP-wX-K2T"/>
+                            <constraint firstItem="IXm-BU-eNK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f9r-HB-c86"/>
+                            <constraint firstItem="f3N-bA-cos" firstAttribute="top" secondItem="bCC-7B-eF6" secondAttribute="bottom" constant="32" id="kmm-A1-1yA"/>
+                            <constraint firstItem="tMv-kg-k2h" firstAttribute="top" secondItem="IXm-BU-eNK" secondAttribute="bottom" constant="32" id="n03-to-iLW"/>
+                            <constraint firstItem="f3N-bA-cos" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q1B-Uf-7eg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="bCC-7B-eF6" id="jei-OY-uEA"/>
+                        <outlet property="passwordTextField" destination="q3c-fw-vaQ" id="9O8-Sb-El0"/>
+                        <outlet property="progressView" destination="IXm-BU-eNK" id="GOI-XR-LWC"/>
+                        <outlet property="usernameTextField" destination="f3N-bA-cos" id="9Bz-JS-7Iq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
